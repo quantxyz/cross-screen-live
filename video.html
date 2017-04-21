@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>cppfun跨平台多终端适配</title>
+</head>
+<body>
+<div id="id_video_container" style="width:100%; height:auto;"></div>
+<script src="//qzonestyle.gtimg.cn/open/qcloud/video/live/h5/live_connect.js" charset="utf-8"></script>
+<script type="text/javascript">
+    (function () {
+        var player = new qcVideo.Player("id_video_container", {
+            "live_url" : "http://yourdomain.com/live/livestream.m3u8", // ios
+			"live_url2" : "rtmp://yourdomain.com/live/livestream", // other
+			"width" : 640,
+			"height" : 480
+        });
+    })();
+</script>
+<div class="code" align="center">
+<p>手机端扫描以下二维码直接观看</p>
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+var myURL = document.location.href; 
+document.writeln("<p id=\"jiathis_webchat\"><img alt=\"二维码加载中...\" style=\"margin-top: 15px;\" src=\"http://s.jiathis.com/qrcode.php?url=" + myURL + "\" height=\"240\" width=\"240\"><p class=\"open\">手机扫一扫 直接打开观看视频<br/>（支持安卓Android/苹果iOS/微信）</p></p>");
+//-->
+</SCRIPT> 
+</div>
+</body>
+</html>	
